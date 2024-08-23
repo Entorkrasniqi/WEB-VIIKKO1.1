@@ -1,0 +1,226 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: aliceblue;
+  margin-top: 0; 
+}
+
+p {
+  color: orangered;
+}
+
+.p-text {
+  margin-left: 50px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  color: aliceblue;
+}
+
+.top-container {
+  width: 1000px;
+  height: 500px;
+  background-color: #323030;
+  position: absolute;
+  margin-left: 250px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  position: sticky;
+  overflow: hidden;
+  background-color: #323030;
+  max-width: 1200px;
+}
+
+li {
+  height: 80px;
+  width: 80px;
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+}
+
+/* navin värin vaihtu */
+li a:hover {
+  background-color: orangered;
+}
+
+#red { background-color: red; }
+#green { background-color: green; }
+#blue { background-color: blue; }
+#yellow { background-color: yellow; color: black; }
+#orange { background-color: orange; }
+
+.clear { clear: both; }
+
+/* kuva */
+img {
+  height: auto;
+}
+
+/* containeri */
+.container {           
+}
+
+.mid-container {
+  margin: 0 auto 50px auto; 
+  padding: 20px;
+  position: relative;
+  background-color: #323030;
+  max-width: 1000px;
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px; 
+}
+
+.mid-container img {
+  max-width: 40%; 
+  height: auto;
+  flex-shrink: 0; 
+}
+
+.mid-container div {
+  flex: 1; 
+}
+
+.mid-container p, .mid-container h2 {
+  margin: 0;
+}
+
+/* Footer styles */
+.footer-bottom {
+  color: orangered;
+  background-color: #323030;
+  padding: 50px 120px 20px 120px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: auto; /* Tämä kiinittää footterin ihan pohjaan*/
+}
+
+.h1-footer-class {
+  text-align: center;
+  margin: 0;
+}
+
+/* Positioning mini1 */
+#mini1 {
+  width: 80px; 
+  height: 80px; 
+  background-color: orangered;
+  position: absolute;
+  right: 250px; 
+  top: 150px;
+  z-index: 1;
+}
+
+#blue {
+}
+
+.f-left {
+  float: left;
+  margin-bottom: 30px;
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#mini2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  display: none;
+}
+
+/* CONTAINER FLEXBOX TINGI */
+.container {
+  display: flex;
+}
+
+/* Responsive TINGI */
+@media (max-width: 1200px) {
+  .mid-container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mid-container {
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+  }
+  
+  .mid-container img {
+    max-width: 100%; 
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    padding: 40px 60px 15px 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mid-container {
+    margin: 0 2% 30px 2%; /* Adjust space between mid-container and footer */
+    padding: 10px;
+  }
+  
+  .mid-container img {
+    width: 100%; /* Image takes full width on small screens */
+  }
+
+  .footer-bottom {
+    padding: 30px 20px 10px 20px;
+  }
+
+  /* Pieni näyttö */
+  #mini1 {
+    width: 40px;
+    height: 40px;
+    right: -20px;
+  }
+}
+
+.box {
+  display: none;
+}
+
+
+
+
