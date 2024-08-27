@@ -11,6 +11,14 @@ body {
   
 }
 
+.hero-image {
+  background-image: url(img/privatespot.jpeg) ; /* The image used */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
 h2 {
   color: aliceblue;
   margin-top: 0; 
@@ -37,6 +45,11 @@ p {
   background-color: #323030;
   position: absolute;
   margin-left: 250px;
+}
+
+.heading-one {
+  text-align: center;
+  
 }
 
 ul {
@@ -86,7 +99,7 @@ img {
 }
 
 .mid-container {
-  margin: 0 auto 50px auto; 
+  margin: 80px auto 50px auto; 
   padding: 20px;
   position: relative;
   background-color: #323030;
@@ -139,16 +152,28 @@ img {
   overflow: scroll;
 }
 
-h3, h2, h1 {
- /* color: red; */
-
-}
 
 .modal {
   padding: 1em;
   max-width: 50ch;
+  background-color: #303032;
+  position: relative;
   
 }
+
+body:has(dialog[open])
+
+dialog::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
 
 /* Footer styles */
 .footer-bottom {
@@ -172,7 +197,7 @@ h3, h2, h1 {
   background-color: orangered;
   position: absolute;
   right: 250px; 
-  top: 150px;
+  top: 130px;
   z-index: 1;
 }
 
