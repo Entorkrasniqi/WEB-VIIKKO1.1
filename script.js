@@ -1,14 +1,19 @@
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+const modal = document.querySelector("#modal");
+const openModal = document.querySelector(".open-button");
+const closeModal = document.querySelector(".close-button");
 
-// "Show the dialog" button opens the dialog modally
-showButton.addEventListener("click", () => {
-  dialog.showModal();
+openModal.addEventListener("click", () => {
+  modal.showModal();
 });
 
-// "Close" button closes the dialog
-closeButton.addEventListener("click", () => {
-  dialog.close();
+closeModal.addEventListener("click", () => {
+  modal.close();
 });
+
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.close();
+  }
+});
+
 

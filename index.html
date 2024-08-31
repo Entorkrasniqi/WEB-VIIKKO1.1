@@ -55,13 +55,26 @@
     <div class="taustakuva">
         <img src="img/Screenshot 2024-04-04 at 10.57.32.png" alt="Kukka" class="Kukkakukka2">
 
-    </div> --->
+<Button to open the modal -->
+<button class="button open-button">Login</button>
 
-    <dialog open class="modal" id="modal">
-        <h2>Tmoi 123</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus hic magni cumque vel, dolorum modi consequuntur commodi fugiat, eius labore ipsam molestias vitae nihil debitis? Consequuntur quaerat voluptatum placeat nihil.</p>
-        <button class="button close-button">close modal</button>
-    </dialog>
+<!-- Modal Dialog -->
+<dialog class="modal" id="modal">
+    <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="submit-button">Login</button>
+        </form>
+    </div>
+</dialog>
+
 
 
     <footer class="footer-bottom">
