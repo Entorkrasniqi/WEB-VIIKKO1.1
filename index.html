@@ -18,17 +18,11 @@
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
         </ul>
+        <button class="button open-button">Login</button>
     </nav>
 
     <div id="mini1">1</div>
     <div id="mini2">2</div>
-
-    <!--<div class="container">
-        <div class="item-one-one">Item 1</div>
-        <div class="item-two-two">Item 2</div>
-        <div class="item-third-third">Item 3</div>
-    </div> -->
-
 
     <div class="mid-container">
         <img class="f-left" src="img/OutsidechillBOHO.jpeg" alt="kukka">
@@ -40,47 +34,29 @@
         </div>
     </div>
 
-    <!--<h3>Overflow ominaisuus</h3>
-    <div class="overflow">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit
-        . Recusandae ducimus expedita sed minima quod? Ex error recusandae possimus at 
-        numquam amet sit? Incidunt perferendis tenetur sunt aut quidem dignissimos inventore?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit
-        . Recusandae ducimus expedita sed minima quod? Ex error recusandae possimus at 
-    </div>
+    <dialog class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-button">&times;</button>
+            <h3>Login</h3>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
 
-    <h3>Kuvan keskittäminen</h3>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-    <h3>Taustakuvan käyttö</h3>
-    <div class="taustakuva">
-        <img src="img/Screenshot 2024-04-04 at 10.57.32.png" alt="Kukka" class="Kukkakukka2">
-
-<Button to open the modal -->
-<button class="button open-button">Login</button>
-
-<!-- Modal Dialog -->
-<dialog class="modal" id="modal">
-    <div class="modal-content">
-        <button class="close-button">&times;</button>
-        <h2>Login</h2>
-        <form id="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit" class="submit-button">Login</button>
-        </form>
-    </div>
-</dialog>
-
-
+                <button type="submit" class="submit-button">Login</button>
+            </form>
+        </div>
+    </dialog>
 
     <footer class="footer-bottom">
         <h1 class="h1-footer-class">made by entor<3</h1>
     </footer>
+
+    
     
     <script src="script.js" defer></script>
 </body>
 </html>
+
