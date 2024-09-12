@@ -13,8 +13,21 @@ body {
   background-image: url(img/privatespot.jpeg);
   height: 500px;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  
+}
+#hero-kuva {
+  height: 40vh;
+  min-height: 300px;
+  max-height: 700px;
+  width: 100%;
+  background-color: rgb(19, 18, 18);
+  background-image: url(img/bohofoodpic.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 h2 {
@@ -88,25 +101,25 @@ p {
   color: white;
 }
 
-/* Responsive navigation for screens less than 768px */
 @media (max-width: 768px) {
   .top-nav ul {
-    display: none; /* Hide menu by default on small screens */
-    flex-direction: column; /* Stack items vertically */
+    display: none;
+    flex-direction: column; 
     position: absolute;
     top: 60px;
     right: 0;
     background-color: #323030;
     width: 100%;
     text-align: right;
+    z-index: 1000; 
   }
 
   .top-nav ul li {
-    width: 100%; /* Full width for list items */
+    width: 100%; 
   }
 
   .top-nav ul li a {
-    padding: 15px; /* More compact padding for mobile */
+    padding: 15px; 
   }
 
   /* Show the mobile menu button */
@@ -136,12 +149,12 @@ p {
 #mini1 {
   width: 80px; 
   height: 80px; 
-  background-color: orangered;
+  background-color: #f2860a;
   position: absolute;
   right: 250px; 
   top: 160px;
-  z-index: 1;
 }
+
 
 .f-left {
   float: left;
@@ -177,9 +190,10 @@ p {
   background-color: #323030;
   max-width: 1000px;
   display: flex;
-  flex-direction: row; /* Default direction */
+  flex-direction: row; 
   align-items: flex-start; 
   gap: 20px; 
+  z-index: 1; 
 }
 
 .mid-container img {
@@ -199,23 +213,23 @@ p {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .mid-container {
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center align items */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .mid-container img {
-    max-width: 100%; /* Full width image on smaller screens */
+    max-width: 100%; 
   }
 
   .p-text {
-    margin-left: 0; /* Reset margin on small screens */
+    margin-left: 0; 
   }
 
   #mini1 {
     width: 40px;
     height: 40px;
-    right: 10px; /* Adjust position for smaller screens */
-    top: 20px; /* Adjust position for smaller screens */
+    right: 10px; 
+    top: 20px; 
   }
 }
 
@@ -361,6 +375,7 @@ body:has(dialog[open]) dialog::backdrop {
     width: 40px;
     height: 40px;
     right: -20px;
+    z-index: 1; 
   }
 
   
