@@ -49,6 +49,7 @@ p {
   text-align: center;
 }
 
+/* Navigation Styles */
 .top-nav {
   display: flex;
   justify-content: space-between;
@@ -65,10 +66,6 @@ p {
   gap: 20px;
 }
 
-.top-nav ul li {
-  display: inline;
-}
-
 .top-nav ul li a {
   display: block;
   color: white;
@@ -79,6 +76,48 @@ p {
 
 .top-nav ul li a:hover {
   background-color: orangered;
+}
+
+/* Mobile menu button */
+.mobile-menu-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive navigation for screens less than 768px */
+@media (max-width: 768px) {
+  .top-nav ul {
+    display: none; /* Hide menu by default on small screens */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #323030;
+    width: 100%;
+    text-align: right;
+  }
+
+  .top-nav ul li {
+    width: 100%; /* Full width for list items */
+  }
+
+  .top-nav ul li a {
+    padding: 15px; /* More compact padding for mobile */
+  }
+
+  /* Show the mobile menu button */
+  .mobile-menu-button {
+    display: block;
+  }
+
+  /* Active state when the menu is open */
+  .top-nav ul.active {
+    display: flex;
+  }
 }
 
 .button.open-button {
@@ -138,6 +177,7 @@ p {
   background-color: #323030;
   max-width: 1000px;
   display: flex;
+  flex-direction: row; /* Default direction */
   align-items: flex-start; 
   gap: 20px; 
 }
@@ -154,6 +194,29 @@ p {
 
 .mid-container p, .mid-container h2 {
   margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .mid-container {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .mid-container img {
+    max-width: 100%; /* Full width image on smaller screens */
+  }
+
+  .p-text {
+    margin-left: 0; /* Reset margin on small screens */
+  }
+
+  #mini1 {
+    width: 40px;
+    height: 40px;
+    right: 10px; /* Adjust position for smaller screens */
+    top: 20px; /* Adjust position for smaller screens */
+  }
 }
 
 .taustakuva {
@@ -259,6 +322,8 @@ body:has(dialog[open]) dialog::backdrop {
   );
   opacity: 0.75;
 }
+
+/* Footer Styles */
 .footer-bottom {
   color: orangered;
   background-color: #323030;
@@ -273,43 +338,23 @@ body:has(dialog[open]) dialog::backdrop {
   margin: 0;
 }
 
+/* Responsive footer for medium and small screens */
 @media (max-width: 1200px) {
-  .mid-container {
-    margin-left: 10%;
-    margin-right: 10%;
+  .footer-bottom {
+    padding: 40px 60px 15px 60px;
   }
 }
 
 @media (max-width: 768px) {
-  .mid-container {
-    flex-direction: column;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 40px;
-  }
-  
-  .mid-container img {
-    max-width: 100%; 
-    margin-bottom: 20px;
-  }
-
   .footer-bottom {
     padding: 40px 60px 15px 60px;
   }
 }
 
 @media (max-width: 480px) {
-  .mid-container {
-    margin: 0 2% 30px 2%;
-    padding: 10px;
-  }
-  
-  .mid-container img {
-    width: 100%;
-  }
-
   .footer-bottom {
     padding: 30px 20px 10px 20px;
+
   }
 
   #mini1 {
@@ -317,13 +362,12 @@ body:has(dialog[open]) dialog::backdrop {
     height: 40px;
     right: -20px;
   }
+
+  
 }
 
 .box {
   display: none;
 }
-
-
-
 
 
